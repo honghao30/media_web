@@ -1,18 +1,37 @@
-$font_color: blue;
-$font_family: Arial, sans-serif;
-$font_size: 16px;
-$line_height: percentage(20px / $font_size);
+//basic setting
+$main-linkcolor: #666;
+$main-linkcolor-hover:#008cba;
+$main-linkcolor-active:#008cba;
+$fontcolor:#212121;
 
-body {
-    color: $font_color;
-  
-    // Property Nesting
-    font: {
-      size: $font_size;
-      family: $font_family;
-    }  
-    line-height: $line_height;
+//mixin
+@mixin fontseting ($ft-size,$ft-weight,$font-color) {
+  font-size:$ft-size;
+  font-weight:$ft-weight;
+  color:$font-color;
+}
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
   }
-  .App {width:500px;margin: 0 auto;}
-  #root {border:1px solid red;}
-  
+}
+
+@mixin breakpoint($point) {
+  @if $point == notebook {
+    @media (max-width: 1230px) { @content; }
+  }
+  @else if $point == media-tablet {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $point == mobiedefault {
+    @media (max-width: 768px)  { @content; }
+  }
+  @else if $point == mobiesmall {
+    @media (max-width: 468px)  { @content; }
+  }      
+  @else if $point == mobieold {
+    @media (max-width: 320px)  { @content; }
+  }         
+}
