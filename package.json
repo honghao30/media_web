@@ -3,28 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
-    "file-loader": "^6.2.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.4.5",
-    "sass": "^1.45.0",
-    "sass-loader": "^12.4.0",
-    "style-loader": "^3.3.1",
-    "url-loader": "^4.1.1",
-    "webpack-dev-server": "^2.11.0",
-    "webpack-cli": "^4.9.1",
-    "webpack": "^3.11.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.27.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-remove-empty-lines": "^0.1.0",
-    "gulp-sass": "^5.0.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -37,5 +15,21 @@
   "bugs": {
     "url": "https://github.com/honghao30/media_web/issues"
   },
-  "homepage": "https://github.com/honghao30/media_web#readme"
+  "homepage": "https://github.com/honghao30/media_web#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.27.7",
+    "dart-sass": "^1.25.0",
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
 }
