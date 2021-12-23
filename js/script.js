@@ -22,6 +22,14 @@ window.addEventListener("scroll", function(){
    } else {
       // upscroll code
       console.log('올라가나')
+      const mainVheight = document.querySelector('.main__visual').offsetHeight;
+      const Nav = document.querySelector('.header');
+      console.log('이미높이' + mainVheight);      
+      if(scrollTop > mainVheight){
+        Nav.classList.add('fixed');
+      }else{
+        Nav.classList.remove('fixed');
+      }
    }
    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 }, false);

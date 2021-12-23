@@ -1,4 +1,5 @@
 //슬라이드 start
+function shslide(){
 const mainslider = document.querySelector(".main__visual--slider"); //전체 슬라이드 컨테이너
 const slider = document.querySelectorAll(".main__visual--slider > .slider"); //모든 슬라이드들
 const slideCount = slider.length; //슬라이드 갯수
@@ -29,12 +30,19 @@ slideNext.addEventListener('click', function() {
         moveSlide(currentIdx + 1); 
     } 
 });
-function autoSlide() {    
-    interval = setInterval(function(){
-        moveSlide(currentIdx + 1);
-    },2000);
+//dot
+const pagination = document.querySelector('.pagenation');
+let pageChild = '';
+for (var i = 1; i < slideCount; i++) {
+pageChild += '<button type="button" class="dot';
+//pageChild += (i === startNum) ? ' dot_active' : '';
+pageChild += '" data-index="' + i + '"><a href="#"><span class="ir-text">'+ i +' </span></a></button>';
 }
+pagination.innerHTML = pageChild;
+const pageDots = document.querySelectorAll('.dot'); // each dot from pagination
 
 
 console.log('dd'+totalWidth);
+}
+shslide();
 //슬라이드 end

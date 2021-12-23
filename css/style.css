@@ -38,6 +38,20 @@
 .header .nav li > ul {
   display: none;
 }
+.header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.header.fixed .header__logo {
+  font-size: 20px;
+  font-weight: 300;
+  color: #212121;
+}
+.header.fixed .nav a {
+  color: #212121;
+}
 
 .main__visual {
   position: relative;
@@ -81,6 +95,18 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.main__visual--slider .slider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .main__visual--slider img {
   width: 100%;
   max-width: 100%;
@@ -94,11 +120,28 @@
   font-size: 20px;
   font-weight: 300;
   color: #fff;
+  z-index: 2;
 }
 .main__visual--slider::after {
   content: "";
   display: block;
   clear: both;
+}
+
+.pagenation {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+.pagenation button {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 2px;
 }
 
 .btn__slider--prev {
