@@ -63,15 +63,36 @@ $fontcolor:#212121;
     position: absolute;    
     right:20px;
     top:20px;    
+    z-index:11;
+    &.is-open .navTwo {
+      display:block;
+      opacity: 1;
+    }
     li {
+        position: relative;
 
       > a {
         @include fontseting(18px,300,#fff);         
         display: block;
-        padding:0 20px;
+        padding:10px 20px;
+        z-index:10;
       }
-      > ul {
+      > .navTwo {
+        z-index:12;
+        position:absolute;
+        width:100%;
+        left:0;
+        top:40px;
+        transition: all 0.3s;
+        opacity: 0;
         display: none;
+        li {
+          a {
+            font-size:13px;
+            padding:5px 0;
+            text-align:center;
+          }
+        }
       }
     }
   }
@@ -88,7 +109,18 @@ $fontcolor:#212121;
       color:#212121;
     }
   }
-  .dim {position: absolute;left:0;top:0;width:100%;background-color: rgba(0,0,0,0.3);}
+  .dim {position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    background-color: rgba(0,0,0,0.3);
+    transition: all 0.3s;
+  &.is-open {
+      display:block;
+      height:200px;
+      z-index:5;
+    }
+  }
 }
 .main__visual  {
   position: relative;

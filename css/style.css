@@ -28,16 +28,37 @@
   position: absolute;
   right: 20px;
   top: 20px;
+  z-index: 11;
+}
+.header .nav.is-open .navTwo {
+  display: block;
+  opacity: 1;
+}
+.header .nav li {
+  position: relative;
 }
 .header .nav li > a {
   font-size: 18px;
   font-weight: 300;
   color: #fff;
   display: block;
-  padding: 0 20px;
+  padding: 10px 20px;
+  z-index: 10;
 }
-.header .nav li > ul {
+.header .nav li > .navTwo {
+  z-index: 12;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40px;
+  transition: all 0.3s;
+  opacity: 0;
   display: none;
+}
+.header .nav li > .navTwo li a {
+  font-size: 13px;
+  padding: 5px 0;
+  text-align: center;
 }
 .header.fixed {
   position: fixed;
@@ -60,6 +81,12 @@
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+.header .dim.is-open {
+  display: block;
+  height: 200px;
+  z-index: 5;
 }
 
 .main__visual {
