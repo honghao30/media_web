@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <title>봄이 오나</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <div class="header__logo">
+                    <h1><a href="#">봄이 오나</a></h1>
+                </div>
+                <div class="header__gnb">
+                    <button type="button" class="mobile__nav">
+                        <span class="ir-text">모바일 메뉴</span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="nav">
+                        <li><a href="#">퍼블리싱</a>
+                            <ul class="navTwo">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS & SASS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">JAVASCRIPT</a></li>
+                        <li><a href="#">FRONTEND</a>
+                            <ul class="navTwo">
+                                <li><a href="#">React</a></li>
+                                <li><a href="#">Vue</a></li>
+                            </ul>                        
+                        </li>
+                        <li><a href="#">웹접근성</a>
+                            <ul class="navTwo">
+                                <li><a href="#">주의사항</a></li>
+                                <li><a href="#">심사기준</a></li>
+                            </ul>                         
+                        </li>
+                        <li><a href="#">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="dim"></div>
+            </div>
+            <!-- //heder -->            
+            <div class="main__visual">
+               <div class="slider__container" id="mainslider">
+                    <button type="button" class="btn__slider--prev">이전</button>
+                    <button type="button" class="btn__slider--next">다음</button>                  
+                    <ul class="main__visual--slider">
+                        <li class="slider">
+                            <div class="slider__inner--text">
+                                <h2>No Plugin! Only Javascript</h2>
+                                <p>봄이 오나</p>
+                            </div>
+                            <img src="./img/main01.jpg" alt="">
+                        </li>
+                        <li class="slider">
+                            <div class="slider__inner--text">
+                                <h2>HTML 마크업 컨벤션</h2>
+                                <p>봄이 오나</p>
+                            </div>
+                            <img src="./img/main02.jpg" alt="">
+                        </li>
+                        <li class="slider">
+                            <div class="slider__inner--text">
+                                <h2>CSS 네이밍 방법론</h2>
+                                <p>봄이 오나</p>
+                            </div>
+                            <img src="./img/main03.jpg" alt="">
+                        </li>
+                        <li class="slider" >
+                            <div class="slider__inner--text">
+                                <h2>세상은 바닐라로 통한다</h2>
+                                <p>봄이 오나</p>
+                            </div>
+                            <img src="./img/main04.jpg" alt="">
+                        </li>    
+                        <li class="slider">
+                            <div class="slider__inner--text">
+                                <h2>React & Vue</h2>
+                                <p>봄이 오나</p>
+                            </div>
+                            <img src="./img/main05.jpg" alt="">
+                        </li>                                                                              
+                    </ul>
+                    <div class="pagenation"></div>
+               </div>
+            </div> 
+            <!-- 비주얼 -->
+            <div class="main__content">
+                <style>
+                    .section01 {padding:100px 0;}
+                    .main__content .biz__list li a {line-height:200px;}
+                </style>
+                <section class="section01">
+                        <ul class="biz__list">
+                            <li><a href="#">HTML</a></li>    
+                            <li><a href="#">CSS</a></li>    
+                            <li><a href="#">Javascript</a></li>  
+                        </ul>
+                </section>
+                <style>
+                    .section02 {padding:100px 0;text-align:center;}
+                    .section02 video {}   
+                    .movie.bottom__play {
+                        position:absolute;
+                        right:0;
+                        bottom:0;
+                        width:350px;
+                        height:300px;
+                        z-index:15;
+                    }               
+                </style>                
+                <section class="section02">
+                    <div class="section__innerbox">
+                        <div class="movie">
+                            <video controls id="myvideo">
+                                <source src="img/laptop.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+                <section class="section03">
+                    <div class="section__innerbox">
+                        <p>보는 재미가 있는</p>
+                        <p>사이트 만들기</p>
+                        <p>마법에 마법을 더하는 마법</p>
+                        <p>자바스크립트 인터렉션</p>
+                    </div>
+                </section>
+                <section class="section04">
+                    <div class="section__innerbox">
+                        <div class="mainpage__img--sleft">
+                            <img src="./img/sect03.jpg" alt="">
+                        </div>
+                        <div class="maintext__text--right">
+                            I am not afraid of storms for<br>
+                            I am learning how to sail my ship.<br>                            
+                            나는 폭풍이 두렵지 않다.<br>                            
+                            나는 배로 항해 하는 법을 배우고 있으니까.<br>                            
+                            <span>-Helen keller 헬렌켈러-</span>
+                        </div>
+                    </div>                
+                </section>  
+                <section class="section05">
+                    <ul class="photo__list">
+                        <li>
+                            <div class="photo__box">
+                                <div class="photo__mask"></div>
+                                <img src="./img/sect04_img1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="photo__box">
+                                <img src="./img/sect04_img2.jpg" alt="">
+                            </div>
+                        </li>   
+                        <li>
+                            <div class="photo__box">
+                                <img src="./img/sect04_img3.jpg" alt="">
+                            </div>
+                        </li>                                                   
+                    </ul>
+                </section>                                                            
+            </div>
+            <div class="footer">
+		    <h3>봄이 오나</h3>
+		    <p>Mailto Gmail: sunghoo78@</p>
+            </div>
+        </div>
+        <script src="js/script.js"></script>   
+        <script src="js/slider.js"></script> 
+    </body>
+</html>
