@@ -78,6 +78,7 @@ $fontcolor:#212121;
   &.fixed {
     .header__logo {
       @include fontseting(20px,300,#212121);
+      top:2px;
     }
     position: fixed;
     left:0;
@@ -87,6 +88,7 @@ $fontcolor:#212121;
       color:#212121;
     }
   }
+  .dim {position: absolute;left:0;top:0;width:100%;background-color: rgba(0,0,0,0.3);}
 }
 .main__visual  {
   position: relative;

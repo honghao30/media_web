@@ -8,7 +8,9 @@ const slideWidth = document.querySelector(".main__visual--slider > li").offsetWi
 const totalWidth = slideWidth * slideCount;
 const pcentWidth = (totalWidth / slideWidth) * 100;
 
+
 let currentIdx = 0; //현재 슬라이드 index
+const startNum = 0;
 
 mainslider.style.left = 0 + 'px';
 
@@ -35,7 +37,7 @@ const pagination = document.querySelector('.pagenation');
 let pageChild = '';
 for (var i = 1; i < slideCount; i++) {
 pageChild += '<button type="button" class="dot';
-//pageChild += (i === startNum) ? ' dot_active' : '';
+pageChild += (i === startNum) ? ' dot_active' : '';
 pageChild += '" data-index="' + i + '"><a href="#"><span class="ir-text">'+ i +' </span></a></button>';
 }
 pagination.innerHTML = pageChild;
