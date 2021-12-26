@@ -59,7 +59,14 @@ window.addEventListener("scroll", function(){
    const sect02Height = sect02.offsetHeight;
    const movibox = document.querySelector('.movie');
    const movieBoxChangeT = sect02Offset + sect02Height;
-   console.log(sectAnival);    
+
+   const sect03 = document.querySelector('.section03');
+   const sect03Offset = sect03.offsetTop;
+   const sect03Height = sect03.offsetHeight;
+   const sectenter = sect03Offset + sect03Height;
+   const sect03List = document.querySelectorAll('.section03 p');
+
+   console.log(sect03List);    
 
    if (scrollTop > lastScrollTop){
       // downscroll code      
@@ -76,6 +83,14 @@ window.addEventListener("scroll", function(){
         movibox.classList.add('bottom__play');
        }
       //  비디오 플레이어
+      if (scrollTop > sect03Offset - 200){        
+        sect03.classList.add('is-active');
+        for(let i = 0;i < sect03List.length;i++){
+          sect03List[i].classList.add('is-show');
+        }
+       } 
+       //sect03
+
    } else {
       // upscroll code
       console.log('올라가나');
@@ -99,7 +114,31 @@ window.addEventListener("scroll", function(){
         movibox.classList.remove('bottom__play');
        }
        //video play
+       if (scrollTop > sect01Offset){
+        sect03.classList.remove('is-active');
+        for(let i = 0;i < sect01List.length;i++){
+          sect03List[i].classList.remove('is-show');
+        }         
+      }       
    }
    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 }, false);
-
+//동영상 재새이
+window.addEventListener('load', videoScroll);
+window.addEventListener('scroll', videoScroll);
+function videoScroll() {
+  if ( document.querySelectorAll('video[autoplay]').length > 0) {
+    var windowHeight = window.innerHeight,
+        videoEl = document.querySelectorAll('video[autoplay]');
+    for (var i = 0; i < videoEl.length; i++) {
+      var thisVideoEl = videoEl[i],
+          videoHeight = thisVideoEl.clientHeight,
+          videoClientRect = thisVideoEl.getBoundingClientRect().top;
+      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ))) {
+        thisVideoEl.play();
+      } else {
+        thisVideoEl.pause();
+      }
+    }
+  }
+};

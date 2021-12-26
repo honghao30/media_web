@@ -229,6 +229,7 @@
   height: 200px;
   border-radius: 50%;
   background-color: #fff;
+  line-height: 200px;
 }
 .main__content .section__innerbox {
   max-width: 1240px;
@@ -236,22 +237,38 @@
 }
 
 .section01 {
-  padding: 20px 0;
+  padding: 100px 0;
+  text-align: center;
   background-color: #38383b;
 }
 
 .section02 {
-  padding: 20px 0;
+  padding: 100px 0;
+  text-align: center;
   background-color: #000;
 }
 
+.movie.bottom__play {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  height: 300px;
+  z-index: 15;
+}
+
 .section03 {
-  padding: 20px 0;
+  padding: 120px 0;
   background-color: #fff;
+}
+.section03 p {
+  font-size: 80px;
+  line-height: 80px;
+  margin: 30px 0;
 }
 
 .section04 {
-  padding: 20px 0;
+  padding: 100px 0;
   background-color: #38383b;
 }
 .section04 .mainpage__img--sleft {
@@ -269,26 +286,41 @@
   clear: both;
 }
 
-.section05 {
-  padding: 20px 0;
-  background-color: #fff;
-}
-.section05 .photo__list {
+.photo__list {
   text-align: center;
 }
-.section05 .photo__list li {
+.photo__list li {
   display: inline-block;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   overflow: hidden;
+  margin: 0 20px;
   border-radius: 6px;
 }
-.section05 .photo__list li img {
+.photo__list li img {
   width: 100%;
+  animation: imgpath 5s infinite alternate;
+}
+
+.photo__mask {
+  overflow: hidden;
+}
+
+@keyframes imgpath {
+  0% {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 63% 0, 100% 100%, 25% 100%);
+  }
+}
+.section05 {
+  padding: 100px 0;
+  background-color: #fff;
 }
 
 .footer {
-  background-color: #38383b;
+  background-color: #212121;
   font-size: 20px;
   font-weight: 300;
   color: #fff;
