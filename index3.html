@@ -53,7 +53,7 @@
                     <button type="button" class="btn__slider--prev">이전</button>
                     <button type="button" class="btn__slider--next">다음</button>                  
                     <ul class="main__visual--slider">
-                        <li class="slider">
+                        <li class="slider slide-active">
                             <div class="slider__inner--text">
                                 <h2>No Plugin! Only Javascript</h2>
                                 <p>봄이 오나</p>
@@ -92,6 +92,10 @@
                     <div class="pagenation"></div>
                </div>
             </div> 
+            <style>
+                .pagenation button {background:rgba(255,255,255,0.5);}
+                .pagenation button.dot_active {background:rgba(255,255,255,1);}
+            </style>
             <!-- 비주얼 -->
             <div class="main__content">
                  <section class="section01">

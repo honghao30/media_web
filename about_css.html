@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <title>봄이 오나</title>
+    </head>
+    <body>
+        <div class="wrap sub__page">
+            <div class="header">
+                <div class="header__logo">
+                    <h1><a href="#">봄이 오나</a></h1>
+                </div>
+                <div class="header__gnb">
+                    <button type="button" class="mobile__nav">
+                        <span class="ir-text">모바일 메뉴</span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="nav">
+                        <li><a href="#">퍼블리싱</a>
+                            <ul class="navTwo">
+                                <li><a href="about_html.html">마크업 컨벤션</a></li>
+                                <li><a href="about_css.html">css 방법론 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="js.html">JAVASCRIPT</a></li>
+                        <li><a href="#">FRONTEND</a>
+                            <ul class="navTwo">
+                                <li><a href="react.html">React</a></li>
+                                <li><a href="#">Vue</a></li>
+                            </ul>                        
+                        </li>
+                        <li><a href="#">웹접근성</a>
+                            <ul class="navTwo">
+                                <li><a href="wa.html">주의사항</a></li>                                
+                            </ul>                         
+                        </li>
+                        <li><a href="https://velog.io/@honghao" target="_blank">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="dim"></div>
+            </div>
+            <!-- //heder -->            
+            <div class="sub__visual">
+               
+            </div> 
+            <!-- 비주얼 -->
+            <div class="sub__content">
+                    <div class="sub__section01">             
+                        <div class="box gray">
+                            1.코드의 재사용성을 높이자<br>
+                            2. 쉽게 유지보수 하자<br>
+                            3. 확장 가능하게 하자<br>
+                            4. 클래스명 만으로도 무슨 의미인지 예측 가능하도록 하자<br>
+                            5. ID사용은 자제하며 프로그램상으로 컨트롤해야 하는 영역외에는 ID사용을 자제한다.<br>
+                            6. 개발, 디버깅, 유지보수를 위하여 CSS 선택자의 이름을 가능한 한 명확하게 만드는 것이 목표이다.<br>
+                            7. 내부에 종속되지 않게<br>                                                   
+                        </div>
+
+                        <h3>클래스 작명 규칙(Convention)</h3>
+                        <div class="cont">
+                            <div class="box gray">
+                                - 클래스 이름 규칙은 BEM(Block Element Modifier)스타일을 따른다.<br>
+                                - block은 문단 전체에 적용된 element 또는 element를 담고 있는 컨테이너를 말한다.
+                            </div>
+
+                            <h4>블록(Block)</h4>
+                            <div class="contxt">
+                            태그, id 선택자를 사용하면 안된다.<br>
+                            블록은 서로 중첩해서 작성 할 수 있다.<br>
+                            블록은 환경에 영향을 받지 않아야 한다. 즉, 여백이나 위치를 설정하면 안된다.<br>
+                            재사용 할 수있는 기능적으로 독립적인 페이지 구성 요소. HTML에서 블록은 class 속성으로 표시된다.<br>
+                            형태(red, big)가 아닌 목적(menu, button)에 맞게 결정해야 한다. 실제 환경에서 Block은 사이트의 Nav, Header, Footer 등에 해당
+                            </div>
+                            <h4>요소(Element)</h4>
+                            <div class="contxt">
+                            블록안에서 특정 기능을 담당하는 부분.<br>
+                            block__element 형태로 사용 (더블 언더바)<br>
+                            형태(red, big)가 아닌 목적(item, text, title)에 맞게 결정해야 한다.<br>
+                            요소는 중첩해서 작성 할 수 있다.<br>
+                            요소는 블록의 부분으로만 사용 할 수 있고 다른 요소의 부분으로 사용할 수 없다.<br>
+                            모든 블록에서 요소는 필수가 아닌 선택적으로 사용한다. 즉 블록안에 요소가 없을 수도 있다.<br>
+                            예) menu__item, header__title …
+                            </div>
+                            <h4>수식어(Modifier)</h4>
+                            <div class="contxt">
+                            블록이나 요소의 모양(color, size..), 상태(disabled, checked..)를 정의한다.<br>
+                            block__element — modifier, block — modifier 형태로 사용(더블 하이픈)<br>
+                            수식어의 블리언 타입과 키-벨류 타입이 있다.<br>
+                            블리언 타입 : 수식어가 있으면 값이 true 라고 가정한다. (form__button — disabled)<br>
+                            키-벨류 타입 : 키, 벨류를 하이픈으로 연결하여 표시한다. (color-red, theme-ocean)<br>
+                            수식어는 단독으로 사용할 수 없다. 즉 기본 블록과 요소에 추가하여 사용해야 한다.<br>
+                            ( class=”block__element block__element — modifier”)                            
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+            <div class="footer">
+		    <h3>봄이 오나</h3>
+		    <p>Mailto Gmail: sunghoo78@</p>
+            </div>
+        </div>
+        <script src="js/script.js"></script>   
+        <script src="js/slider.js"></script> 
+    </body>
+</html>

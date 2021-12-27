@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <title>봄이 오나</title>
+    </head>
+    <body>
+        <div class="wrap sub__page">
+            <div class="header">
+                <div class="header__logo">
+                    <h1><a href="#">봄이 오나</a></h1>
+                </div>
+                <div class="header__gnb">
+                    <button type="button" class="mobile__nav">
+                        <span class="ir-text">모바일 메뉴</span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="nav">
+                        <li><a href="#">퍼블리싱</a>
+                            <ul class="navTwo">
+                                <li><a href="about_html.html">마크업 컨벤션</a></li>
+                                <li><a href="about_css.html">css 방법론 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="js.html">JAVASCRIPT</a></li>
+                        <li><a href="#">FRONTEND</a>
+                            <ul class="navTwo">
+                                <li><a href="react.html">React</a></li>
+                                <li><a href="#">Vue</a></li>
+                            </ul>                        
+                        </li>
+                        <li><a href="#">웹접근성</a>
+                            <ul class="navTwo">
+                                <li><a href="wa.html">주의사항</a></li>                                
+                            </ul>                         
+                        </li>
+                        <li><a href="https://velog.io/@honghao" target="_blank">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="dim"></div>
+            </div>
+            <!-- //heder -->            
+            <div class="sub__visual">
+               
+            </div> 
+            <!-- 비주얼 -->
+            <div class="sub__content">
+                    <div class="sub__section01">
+                        <h3>HTML 속성선언순서</h3>
+                        <div class="cont">
+                            <table class="table table__list--header">
+                                <caption>HTML 속성선언순서</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col>
+                                    <col style="width:20%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>속성</th>
+                                        <th>속성 값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1. 기능</td>
+                                        <td>
+                                            <p>href, src, type</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. 이름</td>
+                                        <td>
+                                            <p>name, id</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. 정보</td>
+                                        <td>
+                                            <p>value, title, alt</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. 옵션</td>
+                                        <td>
+                                            <p>target, tabindex</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5. 꾸미기</td>
+                                        <td>
+                                            <p>class</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6. 역할</td>
+                                        <td>
+                                            <p>role</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7. 속성</td>
+                                        <td>
+                                            <p>aria-controls, aria-describedby, aria-labelledby, aria-popup, aria-modal 등</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8. 상태</td>
+                                        <td>
+                                            <p>checked, disabled, selected, required, aria-selected, aria-current, aria-hidden 등</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>                        
+                        </div>
+
+                        <h3>CSS 속성선언순서</h3>
+                        <div class="cont">
+                            <table class="table table__list--header">
+                                <caption>CSS 속성선언순서</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col style="width:20%;">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>속성</th>
+                                        <th>속성 값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">1. 표시</td>
+                                        <td>display</td>
+                                        <td>none, block, inline, inline-block, inline-table, list-item, table, table-caption,
+                                            table-cell, table-column, table-column-group, table-footer-group, table-header-group,
+                                            table-row, table-row-group</td>
+                                    </tr>
+                                    <tr>
+                                        <td>visibility</td>
+                                        <td>visible, hidden, collapse</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">2. 위치</td>
+                                        <td>position</td>
+                                        <td>absolute, fixed, relative, static</td>
+                                    </tr>
+                                    <tr>
+                                        <td>top, right, bottom, left</td>
+                                        <td>length(px), %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>z-index</td>
+                                        <td>number</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">3. 넘침/흐름</td>
+                                        <td>overflow</td>
+                                        <td>visible, hidden, scroll, auto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>float</td>
+                                        <td>left, right, none</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">4. 크기/간격</td>
+                                        <td>width, max-width, min-width</td>
+                                        <td>auto, length(px), %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>height, max-height, min-height</td>
+                                        <td>auto, length(px), %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>margin</td>
+                                        <td>auto, length(px, em), %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>padding</td>
+                                        <td>auto, length(px, em), %</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">5. 박스모양</td>
+                                        <td>border</td>
+                                        <td>border-width, border-style, border-color</td>
+                                    </tr>
+                                    <tr>
+                                        <td>background</td>
+                                        <td>background-color, background-image, background-repeat, background-attachment,
+                                            background-position</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">6. 폰트/정렬</td>
+                                        <td>font</td>
+                                        <td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+                                    </tr>
+                                    <tr>
+                                        <td>color</td>
+                                        <td>hex_number, hex_number</td>
+                                    </tr>
+                                    <tr>
+                                        <td>text-align</td>
+                                        <td>left, right, center, justify</td>
+                                    </tr>
+                                    <tr>
+                                        <td>vertical-align</td>
+                                        <td>top, middle, bottom, baseline</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7. 기타</td>
+                                        <td></td>
+                                        <td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>                        
+                        </div>
+
+                    </div>
+            </div>
+            <div class="footer">
+		    <h3>봄이 오나</h3>
+		    <p>Mailto Gmail: sunghoo78@</p>
+            </div>
+        </div>
+        <script src="js/script.js"></script>   
+        <script src="js/slider.js"></script> 
+    </body>
+</html>

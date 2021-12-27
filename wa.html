@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <title>봄이 오나</title>
+    </head>
+    <body>
+        <div class="wrap sub__page">
+            <div class="header">
+                <div class="header__logo">
+                    <h1><a href="#">봄이 오나</a></h1>
+                </div>
+                <div class="header__gnb">
+                    <button type="button" class="mobile__nav">
+                        <span class="ir-text">모바일 메뉴</span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="nav">
+                        <li><a href="#">퍼블리싱</a>
+                            <ul class="navTwo">
+                                <li><a href="about_html.html">마크업 컨벤션</a></li>
+                                <li><a href="about_css.html">css 방법론 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="js.html">JAVASCRIPT</a></li>
+                        <li><a href="#">FRONTEND</a>
+                            <ul class="navTwo">
+                                <li><a href="react.html">React</a></li>
+                                <li><a href="#">Vue</a></li>
+                            </ul>                        
+                        </li>
+                        <li><a href="#">웹접근성</a>
+                            <ul class="navTwo">
+                                <li><a href="wa.html">주의사항</a></li>
+                                <li><a href="wa2.html">심사기준</a></li>
+                            </ul>                         
+                        </li>
+                        <li><a href="https://velog.io/@honghao" target="_blank">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="dim"></div>
+            </div>
+            <!-- //heder -->            
+            <div class="sub__visual">
+               
+            </div> 
+            <!-- 비주얼 -->
+            <div class="sub__content">
+                    <div class="sub__section01">             
+                        <div class="box gray">
+                            모든 요소는 키보드 탭으로 이동이 되어야 하며 열리고 닫히는 모달팝업,팝업창,레이어의 경우 닫히면 버튼위치로 포커스가 리턴해야 한다<br>
+				포커스는 열린 모달,레이어내부로 이동이 되어야 하며 모달,레이어안쪽에서만 작동해야 한다.                                             
+                        </div>
+
+                        <h3>대표 사례</h3>
+                        <div class="cont">
+                            <h4>문서 제목</h4>
+                            <div class="box gray">
+                                <pre>
+                                    <xmp> 
+                                        <title>인사말 | 회사소개 | 사이트명</title>
+                                    </xmp> 
+                                </pre>
+                            </div>
+
+                            <h4>테이블 caption</h4>
+                            <div class="box gray">
+                                <pre>
+                                    <xmp> 
+                                        <table>
+                                            <caption>번호,부서,이름으로 구성된 조직연락처 도표</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">부서</th>
+                                                    <th scope="col">이름</th>
+                                                </tr>
+                                            </thead>
+                                        </table>                                        
+                                    </xmp> 
+                                </pre>
+                            </div>
+
+                            <div class="box gray">
+                                <pre>
+                                    <xmp> 
+                                        <table>
+                                            <caption>번호,부서,이름으로 구성된 공지사항 게시판의 2019년 회식 시간 안내표 상세글</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">부서</th>
+                                                    <th scope="col">이름</th>
+                                                </tr>
+                                            </thead>
+                                        </table>                                        
+                                    </xmp> 
+                                </pre>
+                            </div>        
+                            
+                            
+                            <h4>폼요소</h4>
+                            <div class="box gray">
+                                <pre>
+                                    <xmp> 
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>경력</th>
+                                                    <td>
+                                                        <input type="text" title="경력입력 1행"><br>
+                                                        <input type="text" title="경력입력 2행"><br>
+                                                        <input type="text" title="경력입력 3행"><br>
+                                                        <input type="text" title="경력입력 4행">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>                                        
+                                    </xmp> 
+                                </pre>
+                            </div>
+
+                            <h4>레이블이 없는 입력 컨트롤의 title 정의</h4>
+                            <div class="box gray">
+                                [지역 번호] - [국 번호] - [가입자 번호]<br>
+                                [시외 국번] - [시내 국번] - [가입자 번호]
+                            </div>
+
+                            <div class="box gray">
+                                휴대전화번호<br>
+                                [휴대전화 앞 세자리]] - [휴대전화 가운데 네자리] - [휴대전화 마지막 네자리]<br><br>
+                                
+                                이메일주소<br>
+                                [이메일 사용자 아이디]@[이메일 공급자]
+                            </div> 
+                            
+                            <div class="box gray">
+                                휴대전화번호<br>
+                                [휴대전화 앞 세자리]] - [휴대전화 가운데 네자리] - [휴대전화 마지막 네자리]<br><br>
+                                
+                                이메일주소<br>
+                                [이메일 사용자 아이디]@[이메일 공급자]
+
+                                [우편번호]<br>
+                                [기본 주소][상세 주소]
+                            </div>                               
+
+                        </div>
+
+                    </div>
+            </div>
+            <div class="footer">
+		    <h3>봄이 오나</h3>
+		    <p>Mailto Gmail: sunghoo78@</p>
+            </div>
+        </div>
+        <script src="js/script.js"></script>   
+        <script src="js/slider.js"></script> 
+    </body>
+</html>
