@@ -1,6 +1,7 @@
 .wrap {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .header {
@@ -320,9 +321,57 @@
 }
 
 .footer {
+  padding:50px 0;
   background-color: #212121;
   font-size: 20px;
   font-weight: 300;
   color: #fff;
+}
+.sub__content {
+  width: 100%;
+  background-color: #fff;
+  padding:100px 0;
+}
+.sub__section01 {
+  max-width: 1240px;
+  margin:0 auto;
+}
+.sub__section01 h3 {
+  font-size:30px;
+  font-weight:500;
+  color:#212121;
+}
+.sub__visual {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/sub011.jpg) no-repeat;
+  background-size: cover;
+}
+.sub__visual.fixed {
+  background-attachment:fixed; 
+}
+.sub__section01 .cont {margin:30px 0 50px;}
+.table__list--header {width:100%;}
+.table__list--header thead th {
+  border:1px solid #ddd;
+  background: #ccc;
+  font-size:13px;
+  height:40px;
+  padding:10px 20px;
+}
+.table__list--header tbody td {
+  border:1px solid #ddd;
+  font-size:13px;
+  height:40px;
+  padding:10px 20px;
+}
+
+.box.gray {
+  border:1px solid #ddd;
+  padding:20px;
+  font-size:15px;
+  line-height: 20px;
+  color:#212121;
 }
 /*# sourceMappingURL=css/style.css.map */
