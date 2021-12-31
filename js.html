@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">            
+        <title>봄이 오나</title>
+    </head>
+    <body>
+        <div class="wrap sub__page">
+            <div class="header">
+                <div class="header__logo">
+                    <h1><a href="#">봄이 오나</a></h1>
+                </div>
+                <div class="header__gnb">
+                    <button type="button" class="mobile__nav">
+                        <span class="ir-text">모바일 메뉴</span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="nav">
+                        <li><a href="#">퍼블리싱</a>
+                            <ul class="navTwo">
+                                <li><a href="about_html.html">마크업 컨벤션</a></li>
+                                <li><a href="about_css.html">css 방법론 </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="js.html">JAVASCRIPT</a></li>
+                        <li><a href="#">FRONTEND</a>
+                            <ul class="navTwo">
+                                <li><a href="react.html">React</a></li>
+                                <li><a href="#">Vue</a></li>
+                            </ul>                        
+                        </li>
+                        <li><a href="#">웹접근성</a>
+                            <ul class="navTwo">
+                                <li><a href="wa.html">주의사항</a></li>                               
+                            </ul>                         
+                        </li>
+                        <li><a href="https://velog.io/@honghao" target="_blank">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="dim"></div>
+            </div>
+            <!-- //heder -->            
+            <div class="sub__visual2">
+                <video  muted preload id="myvideo2">
+                    <source src="img/line.mp4" type="video/mp4">
+                </video>
+            </div> 
+            <!-- 비주얼 -->
+
+            <div class="footer">
+		    <h3>봄이 오나</h3>
+		    <p>Mailto Gmail: sunghoo78@</p>
+            </div>
+        </div>
+        <script src="js/subscript.js"></script>  
+        <script>
+            const registerVideo = (bound, video) => {
+	             bound = document.querySelector(bound);
+	             video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+			
+			video.currentTime = video.duration * percentScrolled;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
+}
+
+
+registerVideo("#bound-one", "#bound-one video");            
+        </script>
+    </body>
+</html>

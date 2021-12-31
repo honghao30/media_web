@@ -54,7 +54,7 @@ window.addEventListener("scroll", function(){
    if (scrollTop > lastScrollTop){
       // downscroll code      
       console.log('내려가나')   
-      if (scrollTop > subImgHt * 0.5){
+      if (scrollTop > 100){
         subImg.classList.add('fixed');
        }  
 
@@ -69,7 +69,9 @@ window.addEventListener("scroll", function(){
         Nav.classList.remove('fixed');
       }
       //nav fixed
-            
+      if (scrollTop < subImgHt * 0.5){
+        subImg.classList.remove('fixed');
+       }         
    }
    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 }, false);
