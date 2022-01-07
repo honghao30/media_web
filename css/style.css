@@ -173,12 +173,15 @@
   text-align: center;
   z-index: 10;
 }
-.pagenation button {
+.pagenation .dot {
   width: 6px;
   height: 6px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   margin: 0 2px;
+}
+.pagenation .dot.dot_active {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .btn__slider--prev {
@@ -382,8 +385,11 @@
   color:#212121;
   margin:30px 0 10px;
 }
-.sub__visual2 {width:100%; height:100vh;position: relative;Object-fit:fill;}
-.sub__visual2 video {
+.sub__visual2 {width:100%; height:100vh;position: relative;Object-fit:fill;
+transition: all 0.5s ease;
+}
+
+/* .sub__visual2 video {
   position: absolute;
   Object-fit:fill;
   left:0;
@@ -391,5 +397,40 @@
   bottom:0;
   width:100%; 
   height:100vh;
+} */
+.sub__visual2.mask {
+  
+}
+.sub__visual2  .mask-left {position: absolute;
+  left:0;
+  right:50%;
+  height:100%;
+  top:0;
+  bottom:0;
+  transition: all 0.5s ease;
+  transform: translate3d(0,0,0);
+  background-color: #fff;z-index: 1;}
+
+.sub__visual2 .mask-right {position: absolute;
+  right:0;left:50%;
+  height:100%;
+  top:0;bottom:0;
+  transition: all 0.5s ease;
+  transform: translate3d(0,0,0);
+  background-color: #fff;z-index: 1;}
+.sub__visual2.mask .mask-left {
+  transform: translate3d(-100%,0,0);
+}
+.sub__visual2.mask .mask-right {
+  transform: translate3d(100%,0,0);
+}
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  bottom: 0;
+  width: 150%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
 }
 /*# sourceMappingURL=css/style.css.map */

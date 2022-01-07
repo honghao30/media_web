@@ -47,23 +47,56 @@
                 <div class="dim"></div>
             </div>
             <!-- //heder -->            
-            <div class="sub__visual2">
-                <video  muted preload id="myvideo2">
-                    <source src="img/line.mp4" type="video/mp4">
-                </video>
+            <div class="">
+
+                <div class="spacer">
+                    <video  class="video">
+                        <source src="img/line.mp4" type="video/mp4">
+                    </video>
+               </div>
             </div> 
             <!-- 비주얼 -->
+   <style>
 
+html, body {
+   width: 100%;
+   height: 100%;
+}
+
+.spacer {
+   height: 10000px;
+}
+
+.video {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   bottom: 0;
+   width: 150%;
+   transform: translateX(-50%) translateY(-50%);
+   z-index: 1;
+}
+    </style>    
             <div class="footer">
 		    <h3>봄이 오나</h3>
 		    <p>Mailto Gmail: sunghoo78@</p>
             </div>
         </div>
-        <script src="js/subscript.js"></script>  
+        <script src="js/gnb.js"></script>  
         <script>
-            const registerVideo = (bound, video) => {
-	             bound = document.querySelector(bound);
-	             video = document.querySelector(video);
+
+            function subV(){
+                const subvi = document.querySelector('.sub__visual2');
+                console.log(subvi);
+                setTimeout(function() {
+                    subvi.classList.add('mask');
+                }, 1000);     
+            }
+            subV();
+
+const registerVideo = (bound, video) => {
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
 	const scrollVideo = ()=>{
 		if(video.duration) {
 			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
@@ -78,7 +111,7 @@
 }
 
 
-registerVideo("#bound-one", "#bound-one video");            
+registerVideo(".spacer", ".video");           
         </script>
     </body>
 </html>
